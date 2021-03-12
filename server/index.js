@@ -25,8 +25,8 @@ app.use(
 
 function main() {
     const port = process.env.PORT || 5000;
-    // const URI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds135852.mlab.com:35852/mern-graphql-jwt`;
-    const URI ='mongodb+srv://lambdaReadWriteUser:deepthi@cluster0.c0bd4.mongodb.net/mern-graphql-jwt?retryWrites=true&w=majority'
+     const URI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds135852.mlab.com:35852/mern-graphql-jwt`;
+   
     mongoose.connect(URI, { useNewUrlParser: true })
         .then(() => {
             app.listen(5000, () => console.log(`Server is listening on port `));
